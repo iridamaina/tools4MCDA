@@ -5,8 +5,8 @@ Title: Tools for estimate fishing effort, weight and value of landings using Mul
 Version: 0.1
 Authors@R: c(
     person("Irida", "Maina", email = "imain@hcmr.gr", role = c("aut", "cre")),
-    person("Stefanos", "Kavadas", email = "stefanos@hcmr.gr", role = "aut"))
-    person("Dimitris", "Politikos", email = "dimpolit@hcmr.gr", role = "aut")
+    person("Stefanos", "Kavadas", email = "stefanos@hcmr.gr", role = "aut"),
+    person("Dimitris", "Politikos", email = "dimpolit@hcmr.gr", role = "aut"))
 Maintainer: Irida Maina <imaina@hcmr.gr>
 Copyright: Hellenic Center for Marine Research
 Description: Tools for estimate fishing effort, weight and value of landings in the format of table I and table H of the Fisheries Dependent Information data call using Multi-Criteria Decision Analysis and information based on table G and table A 
