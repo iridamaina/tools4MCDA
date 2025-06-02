@@ -4,10 +4,9 @@
 #' 
 #' @param data_FPI  A data frame with Fishing effort estimations after running the function FDays_SSF. The above data frame should contain the fields: Fishing Effort, LON (longitude in WGS84), LAT (latitude in WGS84), gear (values: GNS, GTR, LLS), year, vessel_length_cat (values: "VL0006","VL0010","VL0612",), quarter (values: 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC)
 #' @param ERS_poly  A polygon shapefile with ERS rectangle (csquare of 0.5*0.5) in an 'sf' format
-#' @param Country  The field of Country included in data using "".
 #' @param LON Name of Longitude field in FPI table using "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84
 #' @param LAT Name of Latitude field in FPI table "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84
-#' @param LW Name of the field that contains the landings weight or value in the data table using "".
+#' @param parameter Name of the field that contains the landings weight or value in the data table using "".
 #'  
 #' @return Return of a data.frame including landings weight or value by grid cell of 0.5*0.5 decimal degrees to be used for the creation of table H.
 #' @author I. Maina
