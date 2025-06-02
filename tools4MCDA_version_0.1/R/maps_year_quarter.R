@@ -3,7 +3,7 @@
 #' Create plots presenting the spatial distribution of fishing effort, landings weight or value by year, quarter, fishing gear type, metier etc. 
 #'
 #'
-#' @param data The dataframe to be plotted
+#' @param data_df The dataframe to be plotted
 #' @param quarter A numeric object including the quarters that data are available. For example c(1,2,3,4) .
 #' @param parameter The field in the dataframe that will be plotted. The field should be in "". For example "totfishdays".
 #' @param xlim A numeric object with the minimum and maximum longitude values to be plotted. For example c(19,24)
