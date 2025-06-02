@@ -1,9 +1,9 @@
-#' Compare fishing effort in days at sea estimated using Fishing Pressure Index as a proxy with table_A landings estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country/species
+#' Compare fishing effort in days at sea estimated using Fishing Pressure Index (from MCDA) as a proxy with table_A on landings estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country/species
 #'
 #' Use the produced information that combines Fishing effort estimations expressed in fishing days with Fishing Pressure Index (FPI- estimated by MCDA) to perform comparisons with Fisheries Dependent Information (FDI) data (Table A in the data call) by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country/species
 #'
 #'
-#' @param data  A data frame with FE estimations (e.g. by MCDA and FDI) and species LPUE. The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear (values: GNS, GTR, LLS), year, vessel_length_cat , quarter(values 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC), FE (estimated fishing effort or the Fishing Pressure Index by MCDA), LPUE(estimated landings per unit effort)
+#' @param data  A data frame with FE estimations (e.g. by MCDA and FDI) and species LPUE produced after running the tools4MCDA::landings_SSF function. The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear (values: GNS, GTR, LLS), year, vessel_length_cat , quarter(values 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC), FE (estimated fishing effort or the Fishing Pressure Index by MCDA), LPUE(estimated landings per unit effort)
 #' @param Sub.region  The field of GSAs included in data using "".
 #' @param Country  The field of Country included in data using "".
 #' @param FE The field in the FPI table that contains the fishing effort or the Fishing Pressure Index by MCDA using ""
@@ -18,7 +18,7 @@
 #' @param target_assemblage The field in FPI table that contains the target assemblage using ""
 #' @param vessel_length_cat The field in FPI table that contains the vessel length category using "". Values: VL006, VL0010, VL0612
 #' @param parameter The field from table A to be used for performing spatial estimations. Values: "totwghtlandg", "totvallandg"
-#' @param LW The field in the FPI table that contains the total weight of landings or value by species using ""
+#' @param LW The field in the FPI table that contains the total weight of landings or value by species using "". This is estimated from tools4MCDA::landings_SSF (NOT REVISE)
 #' @param LON Name of Longitude field in FPI table using "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84
 #' @param LAT Name of Latitude field in FPI table "". The latitude should be in decimal degrees and in a geographical coordinate system WGS84
 #'  
