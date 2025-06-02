@@ -1,9 +1,9 @@
 #' Add a field related to Landings Per Unit of Effort (LPUE) in the dataframe derived based on MCDA
 #'
-#' Using the predicted species distribution to estimate a proxy of LPUE. The fields for LPUE by species are added to the dataframe derived from MCDA. The above is used for estimating landings' weight and value.
+#' Using the predicted species distribution to estimate a proxy of LPUE. The fields for LPUE by species are added to the dataframe derived from MCDA. The above is then used for estimating landings' weight and value.
 #'
 #'
-#' @param data The dataframe derived by MCDA
+#' @param data_FPI The dataframe derived by MCDA
 #' @param spec An object including the species that will be included in the MCDA dataframe in 3 alpha code format. For example c("HKE","MUT")
 #' @param folder The folder path that contains the species distribution outcomes (in a text format e.g. txt, csv)
 #' @param name An object with the name of the files. For example c("hke.txt","mut.txt").
