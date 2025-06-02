@@ -4,6 +4,8 @@
 #'
 #'
 #' @param data a dataframe with the Activity index by port 
+#' @param field the field to be plotted. The field should be previously classified using the tools4MCDA::classify function.
+#' @param map_sf the polygon for the base map in sf format. 
 #' @param xlim limits on x axis
 #' @param ylim limits on y axis
 #' @param years column including years in the data
