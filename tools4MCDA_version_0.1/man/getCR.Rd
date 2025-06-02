@@ -11,16 +11,6 @@ getCR(pairwise_matrix)
 }
 \value{
 \item{cr}{The consistency ratio.}
-
-\item{pairwise_matrix_adj}{ The adjusted pairwise matrix with acceptable
-consistency (C.R. < 0.1).  }
-
-\item{delta}{ Measure the maximum absolute difference of elements between
-the pairwise matrix and adjusted pairwise matrix. It should be <2.  }
-
-\item{sig}{ A metric that measures the standard deviation of the difference
-of elements between the pairwise matrix and adjusted pairwise matrix. It
-should be ~1.  }
 }
 \description{
 Compute the consistency ratio of the initial pair-wise comparison matrix
@@ -53,5 +43,5 @@ Xu, Z. (2004). A practical method for improving consistency of judgment
 matrix in the ahp. Journal of Systems Science and Complexity, 17(2).
 }
 \author{
-D. Politikos
+D. Politikos, I. Maina
 }
