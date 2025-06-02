@@ -22,6 +22,10 @@ bubble_plot_year(
 \arguments{
 \item{data}{a dataframe with the Activity index by port}
 
+\item{field}{the field to be plotted. The field should be previously classified using the tools4MCDA::classify function.}
+
+\item{map_sf}{the polygon for the base map in sf format.}
+
 \item{xlim}{limits on x axis}
 
 \item{ylim}{limits on y axis}
