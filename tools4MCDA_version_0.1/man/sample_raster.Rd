@@ -11,9 +11,9 @@ sample_raster(raster_FPI = r_cdist, df_grid = sample, LON = "x", LAT = "y")
 
 \item{df_grid}{The dataframe with geographical coordinates that the raster_FPI will be extracted.}
 
-\item{LON}{Name of Longitude field in df_grid. The longitude should be in a geographical coordinate system WGS84}
+\item{LON}{Name of Longitude field in df_grid in "". The longitude should be in a geographical coordinate system WGS84}
 
-\item{LAT}{Name of Latitude field in df_grid. The longitude should be in a geographical coordinate system WGS84}
+\item{LAT}{Name of Latitude field in df_grid in "". The longitude should be in a geographical coordinate system WGS84}
 }
 \value{
 Return of a data.frame with the values of the raster incorporated in the selected grid.
