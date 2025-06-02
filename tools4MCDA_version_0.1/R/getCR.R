@@ -9,16 +9,6 @@
 #'
 #' @param pairwise_matrix The nxn pair-wise comparison matrix.
 #' @return \item{cr}{The consistency ratio.}
-#'
-#' \item{pairwise_matrix_adj}{ The adjusted pairwise matrix with acceptable
-#' consistency (C.R. < 0.1).  }
-#'
-#' \item{delta}{ Measure the maximum absolute difference of elements between
-#' the pairwise matrix and adjusted pairwise matrix. It should be <2.  }
-#'
-#' \item{sig}{ A metric that measures the standard deviation of the difference
-#' of elements between the pairwise matrix and adjusted pairwise matrix. It
-#' should be ~1.  }
 #' @references Kavadas, S., I. Maina, D. Damalas, I. Dokos, M. Pantazi, and V.
 #' Vassilopoulou (2015). Multi-Criteria Decision Analysis as a tool to extract
 #' fishing footprints and estimate fishing pressure: application to small scale
@@ -32,7 +22,7 @@
 #'
 #' Xu, Z. (2004). A practical method for improving consistency of judgment
 #' matrix in the ahp. Journal of Systems Science and Complexity, 17(2).
-#' @author D. Politikos
+#' @author D. Politikos, I. Maina
 #' @examples
 #' library(FuzzyAHP)
 #' library(tools4MCDA)
