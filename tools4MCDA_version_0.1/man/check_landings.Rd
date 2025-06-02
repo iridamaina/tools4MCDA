@@ -2,7 +2,7 @@
 % Please edit documentation in R/compare_weight_rv030424_RDBFIS.R
 \name{check_landings}
 \alias{check_landings}
-\title{Compare fishing effort in days at sea estimated using Fishing Pressure Index as a proxy with table_A landings estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country/species}
+\title{Compare fishing effort in days at sea estimated using Fishing Pressure Index (from MCDA) as a proxy with table_A on landings estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country/species}
 \usage{
 check_landings(
   data,
@@ -26,7 +26,7 @@ check_landings(
 )
 }
 \arguments{
-\item{data}{A data frame with FE estimations (e.g. by MCDA and FDI) and species LPUE. The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear (values: GNS, GTR, LLS), year, vessel_length_cat , quarter(values 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC), FE (estimated fishing effort or the Fishing Pressure Index by MCDA), LPUE(estimated landings per unit effort)}
+\item{data}{A data frame with FE estimations (e.g. by MCDA and FDI) and species LPUE produced after running the tools4MCDA::landings_SSF function. The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear (values: GNS, GTR, LLS), year, vessel_length_cat , quarter(values 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC), FE (estimated fishing effort or the Fishing Pressure Index by MCDA), LPUE(estimated landings per unit effort)}
 
 \item{Sub.region}{The field of GSAs included in data using "".}
 
@@ -56,7 +56,7 @@ check_landings(
 
 \item{parameter}{The field from table A to be used for performing spatial estimations. Values: "totwghtlandg", "totvallandg"}
 
-\item{LW}{The field in the FPI table that contains the total weight of landings or value by species using ""}
+\item{LW}{The field in the FPI table that contains the total weight of landings or value by species using "". This is estimated from tools4MCDA::landings_SSF (NOT REVISE)}
 
 \item{LON}{Name of Longitude field in FPI table using "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84}
 
