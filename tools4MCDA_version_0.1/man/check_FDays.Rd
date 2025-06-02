@@ -2,7 +2,7 @@
 % Please edit documentation in R/check_FDays_v030424_RDBFIS.R
 \name{check_FDays}
 \alias{check_FDays}
-\title{Compare fishing effort in days at sea estimated using Fishing Pressure Index from MCDA as a proxy and table_G effort estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country}
+\title{Compare fishing effort in days at sea estimated using Fishing Pressure Index (from MCDA) as a proxy and table_G on fishing effort estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country}
 \usage{
 check_FDays(
   data,
@@ -28,6 +28,8 @@ check_FDays(
 
 \item{Country}{The field of Country included in data using "".}
 
+\item{FDays}{The field that contains information expressed in days at sea in a fine scale included the data table using "".}
+
 \item{table_g_effort}{The data frame of the FDI Effort by country.csv. The above table is based on Table G in the data call (Fisheries Dependent Information (FDI) data)}
 
 \item{gear}{The field in FPI table that contains the gear using "".Values: GNS, GTR, LLS}
@@ -47,8 +49,6 @@ check_FDays(
 \item{LON}{Name of Longitude field in FPI table using "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84}
 
 \item{LAT}{Name of Latitude field in FPI table "". The latitude should be in decimal degrees and in a geographical coordinate system WGS84}
-
-\item{Fdays}{The field that contains information expressed in days at sea in a fine scale included the data table using "".}
 }
 \value{
 Return of a data.frame including FPI and Fishing days by grid cell.
