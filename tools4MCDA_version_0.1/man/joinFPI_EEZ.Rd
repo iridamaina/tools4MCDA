@@ -24,36 +24,20 @@ Return of a data.frame of FPI with information by GSA.
 Combine Fishing Pressure Index (FPI- estimated by MCDA) with EEZ polygons to estimate the country.
 }
 \examples{
-#read MCDA result
-mydata_r<-read.table(file="/data.csv", header=T, sep=";")
+#Read_grid4MCDA (A reference grid for performing the analysis)
+data("dfcut2")
+#dfcut2<-read.csv2(file = paste0(general$input_data,"/mcda/grid_MEDBS_005.txt"), header = TRUE, sep= ",")
 
-s_gns_06_q<- mydata_r
-s_gns_06_q$VESSEL_LENGTH<-"VL0006"
-s_gns_06_q$GEAR_TYPE<-"GNS"
-s_gns_06_q$YEAR<-2018
-
-#Read GSA polygons
-GSA_poly_path<-"D:/data"
-GSA_poly_layer_name<-"GSAs_simplified"
-GSA_poly<- read_sf(dsn = GSA_poly_path, layer = GSA_poly_layer_name)
+##MASK the reference grid by country for performing the analysis
+#Please upload a more refined polygon of your country's Exlusive Economic Zone or fishing area
 
 #Read EEZ polygons
-EEZ_poly_path<-"D:/data"
-EEZ_poly_layer_name<-"Greek_EEZ"
+EEZ_poly_path<-paste0("--PATH TO EEZ data--")
+EEZ_poly_layer_name<-"EEZ_GRC"
 EEZ_poly<- read_sf(dsn = EEZ_poly_path, layer = EEZ_poly_layer_name)
 
-#Read table g 
-table_g_effort_path<-"D:/FDI Effort by country.csv"
-table_g_effort<-read.table(file = table_g_effort_path, header = TRUE, sep= ",")
- 
-#Join FPI with GSA
-FPId<-joinFPI_GSA(data_FPI=data,GSA_poly = GSA_poly,field_GSA="SMU_CODE",LON="X_DD",LAT="Y_DD")
-
-#Join FPI with EEZ
-FPIe<-joinFPI_EEZ(data_FPI=FPIg,EEZ_poly = EEZ_poly,field_country="Territory1",LON="X_DD",LAT="Y_DD")
-
-#Estimate Fishing Days from FPI, table g (GSA, country, mandatory fields)
-result_s_gns_06_q<- Dsea_SSF(data=FPIe,Sub.region="Sub.region", Country="Country", FPI="gns06", table_g_effort=table_g_effort,vessel_length_cat="VESSEL_LENGTH",year="YEAR", LON="X_DD", LAT="Y_DD")
+#mask reference grid with EEZ and extract a csv
+dfcut2_EEZ<-joinFPI_EEZ(data_FPI=dfcut2,EEZ_poly = EEZ_poly,field_country="TERRITORY1",LON="x",LAT="y")
 }
 \author{
 I. Maina
