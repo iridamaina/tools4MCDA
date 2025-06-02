@@ -19,6 +19,8 @@ maps_year_quarter(
 )
 }
 \arguments{
+\item{data_df}{The dataframe to be plotted}
+
 \item{quarter}{A numeric object including the quarters that data are available. For example c(1,2,3,4) .}
 
 \item{parameter}{The field in the dataframe that will be plotted. The field should be in "". For example "totfishdays".}
@@ -36,8 +38,6 @@ maps_year_quarter(
 \item{PlotTitle}{The title of the plot in "".}
 
 \item{poly}{A raster object}
-
-\item{data}{The dataframe to be plotted}
 }
 \value{
 Return maps by year, quarter etc.
