@@ -5,8 +5,8 @@
 #'
 #' @param raster_FPI A raster with values to extract 
 #' @param df_grid  The dataframe with geographical coordinates that the raster_FPI will be extracted.
-#' @param LON Name of Longitude field in df_grid. The longitude should be in a geographical coordinate system WGS84
-#' @param LAT Name of Latitude field in df_grid. The longitude should be in a geographical coordinate system WGS84
+#' @param LON Name of Longitude field in df_grid in "". The longitude should be in a geographical coordinate system WGS84
+#' @param LAT Name of Latitude field in df_grid in "". The longitude should be in a geographical coordinate system WGS84
 #'  
 #' @return Return of a data.frame with the values of the raster incorporated in the selected grid.
 #' @author I. Maina 
