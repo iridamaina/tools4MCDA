@@ -3,7 +3,7 @@
 #' Create plots presenting the spatial distribution of fishing effort, landings weight or value by year, fishing gear type, metier etc. 
 #'
 #'
-#' @param data The dataframe to be plotted
+#' @param data_df The dataframe to be plotted
 #' @param years The field of years in the dataframe in ""
 #' @param parameter The field in the dataframe that will be plotted. The field should be in "". For example "totfishdays".
 #' @param xlim A numeric object with the minimum and maximum longitude values to be plotted. For example c(19,24)
