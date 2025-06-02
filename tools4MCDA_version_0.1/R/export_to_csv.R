@@ -5,7 +5,7 @@
 #'
 #' @param data_interpolation rasters to be converted in csv 
 #' @param years a numeric object including the years
-#' @param name name of the data to be extracted #not used
+#' @param name name of the data to be extracted 
 #'  
 #' @return Return rasters with interpolated values
 #' @author I. Maina 
