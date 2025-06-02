@@ -7,7 +7,7 @@
 #' @param cuts a numeric object including the values for the classification
 #' @param scores a numeric object including the scores 
 #'  
-#' @return Return a dataframe with classifies values
+#' @return Return a dataframe with classified values
 #' @author I. Maina 
 #' @examples
 #' library(tools4MCDA)
