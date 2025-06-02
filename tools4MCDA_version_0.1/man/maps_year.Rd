@@ -19,6 +19,8 @@ maps_year(
 )
 }
 \arguments{
+\item{data_df}{The dataframe to be plotted}
+
 \item{years}{The field of years in the dataframe in ""}
 
 \item{parameter}{The field in the dataframe that will be plotted. The field should be in "". For example "totfishdays".}
@@ -38,8 +40,6 @@ maps_year(
 \item{poly}{A coastline polygon}
 
 \item{r}{A raster object}
-
-\item{data}{The dataframe to be plotted}
 }
 \value{
 Return maps by year, quarter etc.
