@@ -37,7 +37,7 @@ landings_SSF(
 
 \item{species}{the field in the FPI table that contains the species (in 3 alpha code) using ""}
 
-\item{table_a}{The data frame of the FDI "catches" (landing weight, landing value, discard weight) by country.csv. The above table is based on Table A in the data call (Fisheries Dependent Information (FDI) data and contains information about landing weight and value of landings)}
+\item{table_a}{The data frame of the FDI "catches" by country. The above table is based on Table A of the data call of Fisheries Dependent Information -FDI and contains information about landing weight and value of landings.}
 
 \item{gear}{The field in FPI table that contains the gear using "".Values: GNS, GTR, LLS}
 
