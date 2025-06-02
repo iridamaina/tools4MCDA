@@ -21,8 +21,6 @@ Fdays_ERSlevel(
 
 \item{LAT}{Name of Latitude field in FPI table "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84}
 
-\item{Country}{The field of Country included in data using "".}
-
 \item{FDays}{Name of the fishing days in the data table in "".}
 }
 \value{
