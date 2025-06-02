@@ -16,6 +16,8 @@ add_LPUE(
 )
 }
 \arguments{
+\item{data_FPI}{The dataframe derived by MCDA}
+
 \item{spec}{An object including the species that will be included in the MCDA dataframe in 3 alpha code format. For example c("HKE","MUT")}
 
 \item{folder}{The folder path that contains the species distribution outcomes (in a text format e.g. txt, csv)}
@@ -29,14 +31,12 @@ add_LPUE(
 \item{LAT}{The field containing latitude values.The field should be in "".}
 
 \item{sep}{The separator}
-
-\item{data}{The dataframe derived by MCDA}
 }
 \value{
 Return a dataframe including a field to be used as a proxy for LPUE and species.
 }
 \description{
-Using the predicted species distribution to estimate a proxy of LPUE. The fields for LPUE by species are added to the dataframe derived from MCDA. The above is used for estimating landings' weight and value.
+Using the predicted species distribution to estimate a proxy of LPUE. The fields for LPUE by species are added to the dataframe derived from MCDA. The above is then used for estimating landings' weight and value.
 }
 \examples{
 library(tools4MCDA)
