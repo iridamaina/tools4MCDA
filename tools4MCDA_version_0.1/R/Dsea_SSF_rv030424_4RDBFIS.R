@@ -3,7 +3,7 @@
 #' Combine Fishing Pressure Index (FPI- estimated by MCDA) with Fisheries Dependent Information (FDI) data (Table G in the data call) to perform spatial estimations of fishing effort (days at sea).
 #'
 #' 
-#' @param data  A data frame with FPI estimations (MCDA). The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear(values: GNS, GTR, LLS), year, vessel_length_cat (values: "VL0006","VL0010","VL0612",), quarter(values: 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC)
+#' @param data  A data frame with FPI estimations (MCDA). The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear(values: GNS, GTR, LLS), year, vessel_length_cat (values: "VL0006","VL0612"), quarter(values: 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in an Alpha 3 code format : GRC)
 #' @param Sub.region  The field of GSAs included in data using "".
 #' @param Country  The field of Country included in data using "".
 #' @param FPIc  The field of Fishing pressure Index estimated by MCDA and included in data using "".
@@ -12,7 +12,7 @@
 #' @param metier The field in FPI table that contains the metier using "". Values should be the same as in table G 
 #' @param year The field in FPI table that contains the year using "".
 #' @param quarter The field in FPI table that contains the quarter using "". Values: 1-4.
-#' @param vessel_length_cat The field in FPI table that contains the vessel length category using "". Values: VL006, VL0010,VL0612
+#' @param vessel_length_cat The field in FPI table that contains the vessel length category using "". Values: VL006, VL0612
 #' @param fishing_tech The field in FPI table that contains the fishing_tech using "". Values should be the same as in table G 
 #' @param target_assemblage The field in FPI table that contains the target assemblage using "". Values should be the same as in table G 
 #' @param LON Name of Longitude field in FPI table using "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84
