@@ -22,7 +22,7 @@ FDays_SSF(
 )
 }
 \arguments{
-\item{data}{A data frame with FPI estimations (MCDA). The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear(values: GNS, GTR, LLS), year, vessel_length_cat (values: "VL0006","VL0010","VL0612",), quarter(values: 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in the following format : GRC)}
+\item{data}{A data frame with FPI estimations (MCDA). The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear(values: GNS, GTR, LLS), year, vessel_length_cat (values: "VL0006","VL0612"), quarter(values: 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in an Alpha 3 code format : GRC)}
 
 \item{Sub.region}{The field of GSAs included in data using "".}
 
@@ -40,7 +40,7 @@ FDays_SSF(
 
 \item{quarter}{The field in FPI table that contains the quarter using "". Values: 1-4.}
 
-\item{vessel_length_cat}{The field in FPI table that contains the vessel length category using "". Values: VL006, VL0010,VL0612}
+\item{vessel_length_cat}{The field in FPI table that contains the vessel length category using "". Values: VL006, VL0612}
 
 \item{fishing_tech}{The field in FPI table that contains the fishing_tech using "". Values should be the same as in table G}
 
