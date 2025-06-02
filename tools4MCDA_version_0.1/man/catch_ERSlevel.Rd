@@ -15,9 +15,7 @@ catch_ERSlevel(data_FPI, ERS_poly, LON = "LON", LAT = "LAT", parameter = "LW")
 
 \item{LAT}{Name of Latitude field in FPI table "". The longitude should be in decimal degrees and in a geographical coordinate system WGS84}
 
-\item{Country}{The field of Country included in data using "".}
-
-\item{LW}{Name of the field that contains the landings weight or value in the data table using "".}
+\item{parameter}{Name of the field that contains the landings weight or value in the data table using "".}
 }
 \value{
 Return of a data.frame including landings weight or value by grid cell of 0.5*0.5 decimal degrees to be used for the creation of table H.
