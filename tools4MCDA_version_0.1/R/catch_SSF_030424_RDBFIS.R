@@ -8,7 +8,7 @@
 #' @param FE the field in the FPI table that contains the fishing effort or the Fishing Pressure Index estimated from MCDA using ""
 #' @param LPUE the field in the FPI table that contains the landings per unit effort by species using "". The values should be normalized in a scale: 0-1
 #' @param species the field in the FPI table that contains the species (in 3 alpha code) using ""
-#' @param table_a The data frame of the FDI "catches" (landing weight, landing value, discard weight) by country.csv. The above table is based on Table A in the data call (Fisheries Dependent Information (FDI) data and contains information about landing weight and value of landings)
+#' @param table_a The data frame of the FDI "catches" by country. The above table is based on Table A of the data call of Fisheries Dependent Information -FDI and contains information about landing weight and value of landings.
 #' @param gear The field in FPI table that contains the gear using "".Values: GNS, GTR, LLS
 #' @param year The field in FPI table that contains the year using "".
 #' @param quarter The field in FPI table that contains the quarter using "".
