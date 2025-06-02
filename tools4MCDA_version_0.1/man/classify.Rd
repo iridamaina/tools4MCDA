@@ -18,7 +18,7 @@ classify(
 \item{scores}{a numeric object including the scores}
 }
 \value{
-Return a dataframe with classifies values
+Return a dataframe with classified values
 }
 \description{
 Classify a dataframe based on scores and cuts
