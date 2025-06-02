@@ -1,4 +1,4 @@
-#' Compare fishing effort in days at sea estimated using Fishing Pressure Index from MCDA as a proxy and table_G effort estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country
+#' Compare fishing effort in days at sea estimated using Fishing Pressure Index (from MCDA) as a proxy and table_G on fishing effort estimations by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country
 #'
 #' Combine Fishing effort estimations expressed in fishing days with Fishing Pressure Index (FPI- estimated by MCDA) with Fisheries Dependent Information (FDI) data (Table G in the data call) to perform comparisons by of the outcomes by GSA/gear/metier/quarter/fishing_tech/target_assemblage/year/country.
 #'
@@ -6,7 +6,7 @@
 #' @param data  A data frame with Fishing effort estimations in Days at Sea in fine spatial scale. The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear(values: GNS, GTR, LLS), year, vessel_length_cat (values:VL006, VL0010,VL0612), quarter( values 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20), Country in the following format (GRC)++
 #' @param Sub.region  The field of GSAs included in data using "".
 #' @param Country  The field of Country included in data using "".
-#' @param Fdays The field that contains information expressed in days at sea in a fine scale included the data table using "". 
+#' @param FDays The field that contains information expressed in days at sea in a fine scale included the data table using "". 
 #' @param table_g_effort The data frame of the FDI Effort by country.csv. The above table is based on Table G in the data call (Fisheries Dependent Information (FDI) data)
 #' @param gear The field in FPI table that contains the gear using "".Values: GNS, GTR, LLS
 #' @param metier The field in FPI table that contains the metier using "".
