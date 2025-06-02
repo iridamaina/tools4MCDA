@@ -15,7 +15,7 @@ export_to_csv5(
 
 \item{years}{a numeric object including the years}
 
-\item{name}{name of the data to be extracted #not used}
+\item{name}{name of the data to be extracted}
 }
 \value{
 Return rasters with interpolated values
