@@ -12,8 +12,6 @@ FDays_SSF(
   table_g_effort,
   gear,
   metier,
-  metier_7,
-  mesh_size_range,
   year,
   quarter,
   vessel_length_cat,

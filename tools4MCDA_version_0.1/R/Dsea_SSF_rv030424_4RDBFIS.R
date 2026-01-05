@@ -38,7 +38,7 @@
 #' @export
 
 
-FDays_SSF<-function (data, Sub.region, Country, FPIc, table_g_effort, gear, metier,metier_7,mesh_size_range,
+FDays_SSF<-function (data, Sub.region, Country, FPIc, table_g_effort, gear, metier,
           year,quarter,vessel_length_cat,fishing_tech,target_assemblage, LON, LAT) 
 {
  # library(sf)
