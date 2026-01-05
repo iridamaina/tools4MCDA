@@ -1,6 +1,6 @@
-#' Estimate fishing effort for SSF expressed in days at sea using Fishing Pressure Index as a proxy
+#' Estimate fishing effort for SSF expressed in days at sea using Fishing Pressure Index as a proxy (version 2 - detailed).
 #'
-#' Combine Fishing Pressure Index (FPI- estimated by MCDA) with Fisheries Dependent Information (FDI) data (Table G in the data call) to perform spatial estimations of fishing effort (days at sea).
+#' Combine Fishing Pressure Index (FPI- estimated by MCDA) with Fisheries Dependent Information (FDI) data (Table G in the data call) to perform spatial estimations of fishing effort (days at sea) (version 2 - detailed).
 #'
 #' 
 #' @param data  A data frame with FPI estimations (MCDA). The above data frame should contain the fields: LON(longitude in WGS84), LAT(latitude in WGS84), gear(values: GNS, GTR, LLS), year, vessel_length_cat (values: "VL0006","VL0612"), quarter(values: 1-4), GSA (a field including information for the Geographical Subarea in the following format: GSA20, Country in an Alpha 3 code format : GRC)
@@ -10,6 +10,8 @@
 #' @param table_g_effort a dataframe similar to Table G (as in the FDI data call)
 #' @param gear The field in FPI table that contains the gear using "".Values: SSF, GNS, GTR, LLS
 #' @param metier The field in FPI table that contains the metier using "". Values should be the same as in table G 
+#' @param metier_7 The field in FPI table that contains the metier_7 using "". Values should be the same as in table G 
+#' @param mesh_size_range The field in FPI table that contains the mesh_size_range using "". Values should be the same as in table G 
 #' @param year The field in FPI table that contains the year using "".
 #' @param quarter The field in FPI table that contains the quarter using "". Values: 1-4.
 #' @param vessel_length_cat The field in FPI table that contains the vessel length category using "". Values: VL006, VL0612
@@ -34,11 +36,12 @@
 #'result_q<- FDays_SSF(data=FPIe,Sub.region="Sub.region", Country="Country", FPIc="FPI", 
 #'                     table_g_effort=table_g_effort,vessel_length_cat="vessel_length",
 #'                     year="year", quarter="quarter",gear="gear_type",fishing_tech="fishing_tech",
-#'                     target_assemblage="target_assemblage", metier="metier",LON="LON", LAT="LAT")
+#'                     target_assemblage="target_assemblage", metier="metier",metier_7="metier_7",mesh_size_range="mesh_size_range",
+#'                     LON="LON", LAT="LAT")
 #' @export
 
 
-FDays_SSF<-function (data, Sub.region, Country, FPIc, table_g_effort, gear, metier,metier_7,mesh_size_range,
+FDays_SSF2<-function (data, Sub.region, Country, FPIc, table_g_effort, gear, metier,metier_7,mesh_size_range,
           year,quarter,vessel_length_cat,fishing_tech,target_assemblage, LON, LAT) 
 {
  # library(sf)
@@ -54,6 +57,8 @@ FDays_SSF<-function (data, Sub.region, Country, FPIc, table_g_effort, gear, meti
   FPI$target_assemblage <- FPI[[target_assemblage]]
   FPI$gear <- FPI[[gear]]
   FPI$metier <- FPI[[metier]]
+  FPI$metier_7 <- FPI[[metier_7]]
+  FPI$mesh_size_range <- FPI[[mesh_size_range]]
   FPI$quarter <- FPI[[quarter]]
   FPI <- as.data.frame(FPI) %>% st_as_sf(coords = c(LON, LAT), 
                                          crs = 4326, remove = FALSE)
@@ -64,10 +69,10 @@ FDays_SSF<-function (data, Sub.region, Country, FPIc, table_g_effort, gear, meti
         3) Information for the vessel legth category is included in the required format")
    
   FPI2<-unite(FPI, col = "joinFDI",c("Country","year","quarter",
-                                     "vessel_length_cat", "fishing_tech","gear","target_assemblage","metier","Sub.region"),
+                                     "vessel_length_cat", "fishing_tech","gear","target_assemblage","metier","metier_7","mesh_size_range","Sub.region"),
   sep = "_",remove = FALSE)
   table_g_effort2 <- unite(table_g_effort, col = "joinFDI", c("country","year","quarter",
-                             "vessel_length","fishing_tech","gear_type","target_assemblage","metier", "sub_region" ),sep = "_")                    
+                             "vessel_length","fishing_tech","gear_type","target_assemblage","metier","metier_7","mesh_size_range","sub_region" ),sep = "_")                    
   
   table_g_effort_n <-table_g_effort2[table_g_effort2$totseadays != "NK", ]
   table_g_effort_n <-table_g_effort2[table_g_effort2$totseadays != "", ]

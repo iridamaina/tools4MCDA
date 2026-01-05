@@ -61,7 +61,7 @@ chl_nc_to_df <- function(file_path, lonmax=26, lonmin=18, latmax=43, latmin=33) 
   chl_df$quarter<-ifelse(chl_df$month>=1 & chl_df$month<=3, 1,
                          ifelse(chl_df$month>=4 & chl_df$month<=6, 2,
                                 ifelse(chl_df$month>=7 & chl_df$month<=9, 3,
-                                       ifelse(chl_df$month>=10 & chl_df$month<=12, 3, NA ))))
+                                       ifelse(chl_df$month>=10 & chl_df$month<=12, 4, NA ))))
   
   # select data from the study area taking out missing data
   chl_df<-subset(chl_df,x<=lonmax & x>=lonmin & y<=latmax & y>=latmin)
